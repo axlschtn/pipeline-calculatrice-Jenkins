@@ -22,7 +22,7 @@ pipeline {
                 }
             }
         }
-        stage('Deliver') {
+        /*stage('Deliver') {
             environment {
                 VOLUME = '$(pwd)/sources:/src'
                 IMAGE = 'cdrx/pyinstaller-linux'
@@ -38,6 +38,6 @@ pipeline {
                     archiveArtifacts "${env.BUILD_ID}/sources/dist/prog"
                 }
             }
-        }
+        }*/
     }
 }
