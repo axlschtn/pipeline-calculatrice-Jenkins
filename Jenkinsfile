@@ -1,9 +1,8 @@
 pipeline {
 
-    agent any
+    agent none
 
     stages {
-
         stage('Build') {
             steps {
                 sh 'python3 -m py_compile sources/prog.py sources/calc.py'
