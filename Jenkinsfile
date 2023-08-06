@@ -8,12 +8,8 @@ pipeline {
             }
         }
         stage('Test') {
-            agent {
-                docker {
-                    image 'grihabor/pytest'
-                }
-            }
             steps {
+                sh 'pip install pytest'
                 sh 'pytest -v --junit-xml test-reports/results.xml sources/test_calc.py'
             }
             post {
